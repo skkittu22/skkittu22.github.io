@@ -1,1 +1,44 @@
-NAME: KALLA KRISHNA VENI
+<!DOCTYPE html>
+<html>
+<body>
+<p>Enter a number to check whether the prime or not: </p>
+<input id="number">
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var x, text;
+  Count = document.getElementById("number").value;
+  var Prime = 1;
+
+	if(Count == 2)
+	{
+	  Prime = 1;
+	}
+	else
+	{
+	  for(var Counter = 2; Counter * Counter <= Count; Counter++)
+	  {
+		if(Count % Counter == 0)
+		{
+		  Prime = 0;
+		  Counter = Count + 11;
+		}
+	  }
+	}
+	if(Prime == 0)
+	{
+	  text = Count + " is not a prime number.";
+	}
+	else
+	{
+	  text = Count + " is a prime number.";
+	}
+
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
+
